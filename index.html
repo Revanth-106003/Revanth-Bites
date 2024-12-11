@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="REVANTH">
+  <title>Delicious Recipes</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="menu-icon" onclick="toggleMenu()"> 
+      <i class="fa fa-bars" id="menu-icon"></i> 
+    </div>
+    <div class="main">
+      <ul class="nav-links">  
+        <li><a href="#home" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#dessert" class="nav-link"><i class="fa-solid fa-ice-cream"></i> Dessert</a></li>
+        <li><a href="#biriyani" class="nav-link"><i class="fas fa-utensils"></i> Biriyani</a></li>
+        <li><a href="#roti" class="nav-link"><i class="fas fa-bread-slice"></i> Roti</a></li>
+        <li><a href="#curry" class="nav-link"><i class="fas fa-pepper-hot"></i> Curry</a></li>
+        <li><a href="#salad" class="nav-link"><i class="fas fa-leaf"></i> Salad</a></li>
+      </ul>
+    </div>
+  </header>
+  
+   <section class="home" id="home">
+     <div class="home-content">
+       <div class="logo"><img src="My-logo.png" alt="my logo"></div>
+       <h1>HOMIE RECIPIES</h1>
+       <p>East or West Food is the BEST😋</p>
+       <br>
+       <span>Enjoy The Delicious Food According To Your Mood</span>
+     </div>
+    </section>
+    <section id="dessert" class="section">
+          <div class="cards-container">
+            <!-- Card 1 -->
+            <div class="card" id="card1">
+              <h2><i class="fa-solid fa-ice-cream"></i> Dessert</h2>
+                <div class="image-container">
+                    <img id="image1" src="image1a.jpeg" alt="Image 1">
+                </div>
+                <p class="name" id="dishName1">Kheer</p>
+                <div class="content">
+                    <ul id="list1" class ="list">
+                        <li>Basamathi Rice</li>
+                        <li>Milk</li>
+                        <li>Sugar</li>
+                        <li>Cardamom Powder</li>
+                        <li>Chopped Dry-fruits</li>
+                    </ul>
+                </div>
+                <div class="buttons">
+                    <button onclick="showPrevious(1)"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button onclick="showNext(1)"><i class="fa-solid fa-arrow-right"></i></button>
+                    <button id="navigate1" onclick="navigateToLink($`{cardId}`)"><i class="fa-solid fa-video"></i></button>
+                </div>
+             </div>
+          </div>
+    </section>
+
+    <section id="biriyani" class="section">
+        <div class="cards-container">
+          <div class="card" id="card2">
+            <h2><i class="fas fa-utensils"></i> Biriyani</h2>
+            <div class="image-container">
+                <img id="image2" src="image2a.jpeg" alt="Image 2">
+            </div>
+            <p class="name" id="dishName2">Dum-Biriyani</p>
+            <div class="content">
+                <ul id="list2" class ="list">
+                    <li>Basmati Rice</li>
+                    <li>Chicken</li>
+                    <li>Onions-2</li>
+                    <li>Yogurt</li>
+                    <li>Salt,Biriyani-Masala</li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <button onclick="showPrevious(2)"><i class="fa-solid fa-arrow-left"></i></button>
+                <button onclick="showNext(2)"><i class="fa-solid fa-arrow-right"></i></button>
+                <button id="navigate2" onclick="navigateToLink($`{cardId}`)"><i class="fa-solid fa-video"></i></button>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="roti" class="section">
+       <div class="cards-containers">
+         <div class="card" id="card3">
+          <h2><i class="fas fa-bread-slice"></i> Roti</h2>
+           <div class="image-container">
+               <img id="image3" src="image3a.jpg" alt="Image 3">
+           </div>
+           <p class="name" id="dishName3">Rumaliroti</p>
+           <div class="content">
+               <ul id="list3" class ="list">
+                   <li>Maida-2cups</li>
+                   <li>Whear Flour-1cup</li>
+                   <li>Salt</li>
+                   <li>Water</li>
+                   <li>Oil</li>
+               </ul>
+           </div>
+           <div class="buttons">
+               <button onclick="showPrevious(3)"><i class="fa-solid fa-arrow-left"></i></i></button>
+               <button onclick="showNext(3)"><i class="fa-solid fa-arrow-right"></i></button>
+               <button id="navigate3" onclick="navigateToLink($`{cardId}`)"><i class="fa-solid fa-video"></i></button>
+           </div>
+         </div>
+       </div>
+    </section>
+
+    <section id="curry" class="section">
+      <div class="cards-containers">
+        <div class="card" id="card4">
+          <h2><i class="fas fa-pepper-hot"></i> Curry</h2>
+          <div class="image-container">
+            <img id="image4" src="image4a.jpg" alt="Image 4">
+          </div>
+          <p class="name" id="dishName4">Boneless Chicken</p>
+          <div class="content">
+            <ul id="list4" class ="list">
+              <li>Boneless Chicken-500grms</li>
+              <li>Onions 2</li>
+              <li>Chicken Masala</li>
+              <li>Tomatoes 2</li>
+              <li>Ginger-garlic-paste</li>
+            </ul>
+          </div>
+          <div class="buttons">
+            <button onclick="showPrevious(4)"><i class="fa-solid fa-arrow-left"></i></i></button>
+            <button onclick="showNext(4)"><i class="fa-solid fa-arrow-right"></i></button>
+            <button id="navigate4" onclick="navigateToLink($`{cardId}`)"><i class="fa-solid fa-video"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="salad" class="section">
+      <div class="cards-container">
+        <div class="card" id="card5">
+          <h2><i class="fas fa-leaf"></i> Salad</h2>
+          <div class="image-container">
+            <img id="image5" src="image5a.jpg" alt="Image 4">
+          </div>
+          <p class="name" id="dishName5">Green Salad</p>
+          <div class="content">
+            <ul  class ="list" id="list5">
+                <li>Mixed Greens</li>
+                <li>Cucumber</li>
+                <li>Carrot</li>
+                <li>Tomato</li>
+                <li>Onion</li>
+            </ul>
+          </div>
+          <div class="buttons">
+            <button onclick="showPrevious(5)"><i class="fa-solid fa-arrow-left"></i></button>
+            <button onclick="showNext(5)"><i class="fa-solid fa-arrow-right"></i></button>
+            <button id="navigate5" onclick="navigateToLink($`{cardId}`)"><i class="fa-solid fa-video"></i></button>
+          </div>
+       </div>
+      </div>
+    </section>
+  
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Delicious Recipes. All Rights Reserved By <span>Revanth</span>.</p>
+      </div>
+    </footer>
+  
+    <script src="style.js">
+    </script>
+  </body>
+</html>
